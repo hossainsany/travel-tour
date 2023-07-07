@@ -1,19 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
-@import url("@fortawesome/fontawesome-free/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+@import url('@fortawesome/fontawesome-free/css/all.min.css');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     position: relative;
 }
 img {
     width: 100%;
 }
+
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -21,6 +24,7 @@ img {
 section {
     padding: 100px 0;
 }
+
 .btn-primary {
     display: inline-block;
     background-color: #4e9756;
@@ -109,6 +113,7 @@ header {
     // navbar
     nav.navbar {
         padding: 20px 0;
+
         .nav {
             display: flex;
             align-items: center;
@@ -142,12 +147,15 @@ header {
                     }
                 }
             }
+            .burger-menu {
+                display: none;
+            }
         }
     }
 
     //hero
     .hero {
-        background: url("../img/hero-bg.jpg");
+        background: url('../img/hero-bg.jpg');
         min-height: 80vh;
         background-position: center;
         background-size: cover;
@@ -159,7 +167,7 @@ header {
             height: 100%;
             top: 0;
             left: 0;
-            content: "";
+            content: '';
             background-color: #000;
             opacity: 0.5;
             z-index: -1;
@@ -559,8 +567,11 @@ header {
     }
 
     header {
+        position: relative;
+        z-index: 1;
         //top contact
         .top-contacts {
+            display: none;
             .top-contact-content {
                 flex-direction: column;
                 .text {
@@ -572,20 +583,51 @@ header {
 
         // navbar
         nav.navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             padding: 20px 0;
+            z-index: 2;
+            background: #ffffffef;
             .nav {
-                flex-direction: column;
+                flex-direction: row;
+                transition: 300ms ease-in-out;
                 .logo {
                     font-size: 22px;
                 }
                 .menu-links {
+                    display: none;
+                    flex-direction: column;
                     padding: 10px 0;
                     li {
-                        margin-right: 10px;
+                        margin: 10px 0;
+                    }
+                    &.dflex {
+                        display: flex;
                     }
                 }
                 .btn-primary {
-                    margin-top: 10px;
+                    display: none;
+                    margin: 10px 0;
+                    &.dflex {
+                        display: flex;
+                    }
+                }
+                .burger-menu {
+                    display: flex;
+                    font-size: 20px;
+                    cursor: pointer;
+                    height: 30px;
+                    width: 30px;
+                    background: #fff;
+                    border-radius: 50%;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                }
+                &.column {
+                    flex-direction: column;
                 }
             }
         }
