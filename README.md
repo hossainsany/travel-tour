@@ -1,6 +1,7 @@
 # Travel and Tour Website Portfolio Project
 Welcome to my Travel and Tour Website project! This is a one-page travel and tour website, which serves as a demonstration of my skills in web development. The website is built using Vite, JavaScript, Sass, and HTML. Please note that this is a demo website, and the links and booking system do not function.
 
+
 ### Features
 
 Explore the features of this travel and tour website demo:
@@ -15,6 +16,7 @@ Explore the features of this travel and tour website demo:
 
    - **Efficient Development:** The project is built using the Vite build tool, ensuring efficient development and performance.
 
+
 ### Technologies Used
 
 Here are the technologies and tools used in creating this project:
@@ -23,6 +25,7 @@ Here are the technologies and tools used in creating this project:
   - JavaScript - Used for adding interactivity to the website.
   - Sass - Utilized for styling and CSS preprocessing, resulting in a polished design.
   - HTML - Employed for structuring the website and its content.
+
 
 ### Conclusion
 
